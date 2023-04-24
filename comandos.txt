@@ -1,0 +1,20 @@
+--Para criar a solução
+dotnet new sln --name GalloFlix
+
+--Para criara o projetp
+dotnet new mvc -f net6.0 -o GalloFlix
+
+--para adicionar o projeto a solução
+dotnet sln add GalloFlix\GalloFlix.csproj
+
+-- Instalar os pacotes do Entity - para acesso a dados
+dotnet add package Microsoft.EntityFrameworkCore --version 6.0.16
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.16
+dotnet add package Pomelo.EntityFrameworkCore.MySql --version 6.0.2
+
+-- Instalar o pacote do Identity - para gestão de usuário 
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 6.0.16
+
+--remover pacote
+troca add por remove 
+
