@@ -324,6 +324,26 @@ namespace GalloFlix.Migrations
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
+            migrationBuilder.InsertData(
+                table: "Roles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[,]
+                {
+                    { "28df54f6-ee43-440a-ba6b-ff5446bcef59", "fe768d78-a94b-470a-a2c9-f9be2f08b353", "Moderador", "MODERADOR" },
+                    { "3fbc7208-e87e-48a3-a658-4042250985c1", "eb3bb962-f04d-424a-bcf8-57f5c27dc532", "Administrador", "ADMINISTRADOR" },
+                    { "43f76b78-6355-4d2c-99f0-7c1ed9a738bb", "b7b92a95-0326-40ed-98c7-b0423101d4ce", "Usuário", "USUÁRIO" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "DateOfBirth", "Discriminator", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "Name", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "ProfilePicture", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                values: new object[] { "b86da518-e74b-4e78-bd06-e83b35e9a219", 0, "70f993c6-2d31-4265-87eb-be026f7908f5", new DateTime(2006, 3, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "AppUser", "joanycamily23@gmail.com", true, false, null, "Joany Camily da Silva", "JOANYCAMILY23@GMAIL.COM", "JOANY", "AQAAAAEAACcQAAAAELU9vS3yj+DFG3St+iFRfW3ucueStrgg5nEEm7UA9Y5Q8InCnuDWb/x+R7c6CQojAw==", "14981799095", true, "/img/users/avatar.png", "e3e8d660-1e34-479f-8b18-14ef63bc639d", false, "Joany" });
+
+            migrationBuilder.InsertData(
+                table: "UserRoles",
+                columns: new[] { "RoleId", "UserId" },
+                values: new object[] { "3fbc7208-e87e-48a3-a658-4042250985c1", "b86da518-e74b-4e78-bd06-e83b35e9a219" });
+
             migrationBuilder.CreateIndex(
                 name: "IX_MovieComment_MovieId",
                 table: "MovieComment",
