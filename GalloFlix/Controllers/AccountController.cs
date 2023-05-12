@@ -1,13 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace GalloFlix.Controllers
-{
+namespace GalloFlix.Controllers;
+
+    [Authorize(Roles = "Administrador")]
     public class AccountController : Controller
     {
         private readonly ILogger<AccountController> _logger;
@@ -16,16 +14,21 @@ namespace GalloFlix.Controllers
         {
             _logger = logger;
         }
-
         public IActionResult Index()
         {
             return View();
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        [AllowAnonymous]
+        public IActionResult Login(string returnUrl)
         {
-            return View("Error!");
+            return View();
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public IActionResult Login(string usuario, string senha)
+        {
+            return View();
         }
     }
-}

@@ -1,13 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace GalloFlix.Controllers
-{
+namespace GalloFlix.Controllers;
+
     [Authorize(Roles = "Administrador")]        
     public class AdminController : Controller
     {
@@ -29,4 +26,3 @@ namespace GalloFlix.Controllers
             return View("Error!");
         }
     }
-}
