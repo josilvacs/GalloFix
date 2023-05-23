@@ -12,18 +12,18 @@ builder.Services.AddControllersWithViews();
 string conn = builder.Configuration.GetConnectionString("GalloFlix");
 var version = ServerVersion.AutoDetect(conn);
 
-//Serviço de conexão
+// Serviço de Conexão com banco de dados
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseMySql(conn, version) 
+    options.UseMySql(conn, version)
 );
 
-//Serviço de Gestão de Usuários - Identity
+// Serviço de Gestão de Usuário - Identity
 builder.Services.AddIdentity<AppUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 
-
 var app = builder.Build();
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

@@ -38,11 +38,11 @@ namespace GalloFlix.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     OriginalTitle = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Synopsis = table.Column<string>(type: "varchar(5000)", maxLength: 5000, nullable: false)
+                    Synopsis = table.Column<string>(type: "varchar(8000)", maxLength: 8000, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     MovieYear = table.Column<short>(type: "Year", nullable: false),
-                    Duration = table.Column<int>(type: "int", nullable: false),
-                    AgeRating = table.Column<int>(type: "int", nullable: false),
+                    Duration = table.Column<short>(type: "smallint", nullable: false),
+                    AgeRating = table.Column<byte>(type: "tinyint unsigned", nullable: false),
                     Image = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
@@ -329,20 +329,20 @@ namespace GalloFlix.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "28df54f6-ee43-440a-ba6b-ff5446bcef59", "fe768d78-a94b-470a-a2c9-f9be2f08b353", "Moderador", "MODERADOR" },
-                    { "3fbc7208-e87e-48a3-a658-4042250985c1", "eb3bb962-f04d-424a-bcf8-57f5c27dc532", "Administrador", "ADMINISTRADOR" },
-                    { "43f76b78-6355-4d2c-99f0-7c1ed9a738bb", "b7b92a95-0326-40ed-98c7-b0423101d4ce", "Usuário", "USUÁRIO" }
+                    { "2184a8d3-d06c-4e95-b787-727c0cb79970", "81dec6aa-0ab5-49b3-81d0-8e4ca82fb173", "Usuário", "USUÁRIO" },
+                    { "42e1a6cc-5c24-450c-b1da-05cf5306238c", "5a52fcd3-c476-4d9d-982d-0485fb9f81f9", "Administrador", "ADMINISTRADOR" },
+                    { "e8f02e5a-8403-4f21-ab8d-f78ee22fc46f", "4451ca90-9c31-4b58-8668-bd756c7c0e5c", "Moderador", "MODERADOR" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "DateOfBirth", "Discriminator", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "Name", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "ProfilePicture", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "b86da518-e74b-4e78-bd06-e83b35e9a219", 0, "70f993c6-2d31-4265-87eb-be026f7908f5", new DateTime(2006, 3, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "AppUser", "joanycamily23@gmail.com", true, false, null, "Joany Camily da Silva", "JOANYCAMILY23@GMAIL.COM", "JOANY", "AQAAAAEAACcQAAAAELU9vS3yj+DFG3St+iFRfW3ucueStrgg5nEEm7UA9Y5Q8InCnuDWb/x+R7c6CQojAw==", "14981799095", true, "/img/users/avatar.png", "e3e8d660-1e34-479f-8b18-14ef63bc639d", false, "Joany" });
+                values: new object[] { "0ebcba5d-0616-463e-a987-f3354e481702", 0, "a893163b-5d1f-4cf0-a952-813c01d98e7c", new DateTime(1981, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "AppUser", "gallojunior@gmail.com", true, false, null, "José Antonio Gallo Junior", "GALLOJUNIOR@GMAIL.COM", "GALLOJUNIOR", "AQAAAAEAACcQAAAAEBhGik+SDPMpeQXx8EsZhJP72H0GxpyEf8a5BB5xtK2EvRoRouNhUf/rGbyYn90FfQ==", "14981544857", true, "/img/users/avatar.png", "6d8f2535-b238-4e82-aafa-f629830a317c", false, "GalloJunior" });
 
             migrationBuilder.InsertData(
                 table: "UserRoles",
                 columns: new[] { "RoleId", "UserId" },
-                values: new object[] { "3fbc7208-e87e-48a3-a658-4042250985c1", "b86da518-e74b-4e78-bd06-e83b35e9a219" });
+                values: new object[] { "42e1a6cc-5c24-450c-b1da-05cf5306238c", "0ebcba5d-0616-463e-a987-f3354e481702" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_MovieComment_MovieId",

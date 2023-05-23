@@ -41,11 +41,11 @@ namespace GalloFlix.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("AgeRating")
-                        .HasColumnType("int");
+                    b.Property<byte>("AgeRating")
+                        .HasColumnType("tinyint unsigned");
 
-                    b.Property<int>("Duration")
-                        .HasColumnType("int");
+                    b.Property<short>("Duration")
+                        .HasColumnType("smallint");
 
                     b.Property<string>("Image")
                         .HasMaxLength(200)
@@ -61,8 +61,8 @@ namespace GalloFlix.Migrations
 
                     b.Property<string>("Synopsis")
                         .IsRequired()
-                        .HasMaxLength(5000)
-                        .HasColumnType("varchar(5000)");
+                        .HasMaxLength(8000)
+                        .HasColumnType("varchar(8000)");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -172,22 +172,22 @@ namespace GalloFlix.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "3fbc7208-e87e-48a3-a658-4042250985c1",
-                            ConcurrencyStamp = "eb3bb962-f04d-424a-bcf8-57f5c27dc532",
+                            Id = "42e1a6cc-5c24-450c-b1da-05cf5306238c",
+                            ConcurrencyStamp = "5a52fcd3-c476-4d9d-982d-0485fb9f81f9",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "28df54f6-ee43-440a-ba6b-ff5446bcef59",
-                            ConcurrencyStamp = "fe768d78-a94b-470a-a2c9-f9be2f08b353",
+                            Id = "e8f02e5a-8403-4f21-ab8d-f78ee22fc46f",
+                            ConcurrencyStamp = "4451ca90-9c31-4b58-8668-bd756c7c0e5c",
                             Name = "Moderador",
                             NormalizedName = "MODERADOR"
                         },
                         new
                         {
-                            Id = "43f76b78-6355-4d2c-99f0-7c1ed9a738bb",
-                            ConcurrencyStamp = "b7b92a95-0326-40ed-98c7-b0423101d4ce",
+                            Id = "2184a8d3-d06c-4e95-b787-727c0cb79970",
+                            ConcurrencyStamp = "81dec6aa-0ab5-49b3-81d0-8e4ca82fb173",
                             Name = "Usuário",
                             NormalizedName = "USUÁRIO"
                         });
@@ -348,8 +348,8 @@ namespace GalloFlix.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "b86da518-e74b-4e78-bd06-e83b35e9a219",
-                            RoleId = "3fbc7208-e87e-48a3-a658-4042250985c1"
+                            UserId = "0ebcba5d-0616-463e-a987-f3354e481702",
+                            RoleId = "42e1a6cc-5c24-450c-b1da-05cf5306238c"
                         });
                 });
 
@@ -393,22 +393,22 @@ namespace GalloFlix.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "b86da518-e74b-4e78-bd06-e83b35e9a219",
+                            Id = "0ebcba5d-0616-463e-a987-f3354e481702",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "70f993c6-2d31-4265-87eb-be026f7908f5",
-                            Email = "joanycamily23@gmail.com",
+                            ConcurrencyStamp = "a893163b-5d1f-4cf0-a952-813c01d98e7c",
+                            Email = "gallojunior@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
-                            NormalizedEmail = "JOANYCAMILY23@GMAIL.COM",
-                            NormalizedUserName = "JOANY",
-                            PasswordHash = "AQAAAAEAACcQAAAAELU9vS3yj+DFG3St+iFRfW3ucueStrgg5nEEm7UA9Y5Q8InCnuDWb/x+R7c6CQojAw==",
-                            PhoneNumber = "14981799095",
+                            NormalizedEmail = "GALLOJUNIOR@GMAIL.COM",
+                            NormalizedUserName = "GALLOJUNIOR",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBhGik+SDPMpeQXx8EsZhJP72H0GxpyEf8a5BB5xtK2EvRoRouNhUf/rGbyYn90FfQ==",
+                            PhoneNumber = "14981544857",
                             PhoneNumberConfirmed = true,
-                            SecurityStamp = "e3e8d660-1e34-479f-8b18-14ef63bc639d",
+                            SecurityStamp = "6d8f2535-b238-4e82-aafa-f629830a317c",
                             TwoFactorEnabled = false,
-                            UserName = "Joany",
-                            DateOfBirth = new DateTime(2006, 3, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Joany Camily da Silva",
+                            UserName = "GalloJunior",
+                            DateOfBirth = new DateTime(1981, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "José Antonio Gallo Junior",
                             ProfilePicture = "/img/users/avatar.png"
                         });
                 });

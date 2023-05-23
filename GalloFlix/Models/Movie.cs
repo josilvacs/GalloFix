@@ -22,22 +22,21 @@ public class Movie
 
     [Display(Name = "Sinopse")]
     [Required(ErrorMessage = "A Sinopse é obrigatória")]
-    [StringLength(5000, ErrorMessage = "A Sinopse deve possuir no máximo 5000 caracteres")]
+    [StringLength(8000, ErrorMessage = "A Sinopse deve possuir no máximo 8000 caracteres")]
     public string Synopsis { get; set; }
 
     [Column(TypeName = "Year")]
     [Display(Name = "Ano de Estreia")]
-    [Required(ErrorMessage = "o Ano de Estreia é obrigatório")]
+    [Required(ErrorMessage = "O Ano de Estreia é obrigatório")]
     public Int16 MovieYear { get; set; }
 
-    [Display(Name ="Duração (em minutos)")]
+    [Display(Name = "Duração (em minutos)")]
     [Required(ErrorMessage = "A Duração é obrigatória")]
-    public int Duration { get; set; }
+    public Int16 Duration { get; set; }
 
     [Display(Name = "Classificação Etária")]
     [Required(ErrorMessage = "A Classificação Etária é obrigatória")]
-
-    public int AgeRating { get; set; }
+    public byte AgeRating { get; set; }
 
     [StringLength(200)]
     [Display(Name = "Foto")]
@@ -45,15 +44,13 @@ public class Movie
 
     [NotMapped]
     [Display(Name = "Duração")]
-
     public string HourDuration { get {
         return TimeSpan.FromMinutes(Duration)
-            .ToString(@"%'h 'mm'min'");
-    }}
+            .ToString(@"%h'h 'mm'min'");
+    }} 
 
-    public ICollection<MovieComment> Comments { get; set; }    
+    public ICollection<MovieComment> Comments { get; set; }
     public ICollection<MovieGenre> Genres { get; set; }
     public ICollection<MovieRating> Ratings { get; set; }
-
 
 }
