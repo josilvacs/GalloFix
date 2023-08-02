@@ -172,24 +172,24 @@ namespace GalloFlix.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "42e1a6cc-5c24-450c-b1da-05cf5306238c",
-                            ConcurrencyStamp = "5a52fcd3-c476-4d9d-982d-0485fb9f81f9",
+                            Id = "6a2f77c2-fe92-41da-a5a9-5354133ade63",
+                            ConcurrencyStamp = "92d59941-9cf9-4fd1-9852-126f6b86a733",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "e8f02e5a-8403-4f21-ab8d-f78ee22fc46f",
-                            ConcurrencyStamp = "4451ca90-9c31-4b58-8668-bd756c7c0e5c",
+                            Id = "1e29f37c-4689-4406-9901-4477a2ac91e6",
+                            ConcurrencyStamp = "ce8f3aca-b446-4e95-9ee6-344ed72440bb",
                             Name = "Moderador",
                             NormalizedName = "MODERADOR"
                         },
                         new
                         {
-                            Id = "2184a8d3-d06c-4e95-b787-727c0cb79970",
-                            ConcurrencyStamp = "81dec6aa-0ab5-49b3-81d0-8e4ca82fb173",
+                            Id = "28458763-b611-4efa-b9ec-2063c5a8e4e9",
+                            ConcurrencyStamp = "3f8f91ee-02db-418d-b9f0-d0af67718867",
                             Name = "Usuário",
-                            NormalizedName = "USUÁRIO"
+                            NormalizedName = " USUÁRIO"
                         });
                 });
 
@@ -348,8 +348,8 @@ namespace GalloFlix.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "0ebcba5d-0616-463e-a987-f3354e481702",
-                            RoleId = "42e1a6cc-5c24-450c-b1da-05cf5306238c"
+                            UserId = "beceb905-0db7-44c0-bfda-e060f64c1bcc",
+                            RoleId = "6a2f77c2-fe92-41da-a5a9-5354133ade63"
                         });
                 });
 
@@ -393,22 +393,22 @@ namespace GalloFlix.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "0ebcba5d-0616-463e-a987-f3354e481702",
+                            Id = "beceb905-0db7-44c0-bfda-e060f64c1bcc",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a893163b-5d1f-4cf0-a952-813c01d98e7c",
-                            Email = "gallojunior@gmail.com",
+                            ConcurrencyStamp = "1011ddc5-c51c-4ee8-9632-5fc51d5372c7",
+                            Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
-                            NormalizedEmail = "GALLOJUNIOR@GMAIL.COM",
-                            NormalizedUserName = "GALLOJUNIOR",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBhGik+SDPMpeQXx8EsZhJP72H0GxpyEf8a5BB5xtK2EvRoRouNhUf/rGbyYn90FfQ==",
-                            PhoneNumber = "14981544857",
+                            NormalizedEmail = "ADMIN@GMAIL.COM",
+                            NormalizedUserName = "ADMIN",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBeFXzGKNxObzqEPTbWTXL9hFXVwN4Hc8OaWkLtfpe4N8HClLlXO9GjSR2GL+aNLUw==",
+                            PhoneNumber = "14912345678",
                             PhoneNumberConfirmed = true,
-                            SecurityStamp = "6d8f2535-b238-4e82-aafa-f629830a317c",
+                            SecurityStamp = "25b8363f-cc0f-42b5-99c8-d03702e0b946",
                             TwoFactorEnabled = false,
-                            UserName = "GalloJunior",
-                            DateOfBirth = new DateTime(1981, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "José Antonio Gallo Junior",
+                            UserName = "Admin",
+                            DateOfBirth = new DateTime(2005, 11, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Seu Nome Completo",
                             ProfilePicture = "/img/users/avatar.png"
                         });
                 });

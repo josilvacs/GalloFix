@@ -13,12 +13,12 @@ public class MovieComment
     [Required]
     public int MovieId { get; set; }
     [ForeignKey("MovieId")]
-    public Movie Movie { get; set; } // PROPRIEDADE DE NAVEGAÇÃO
+    public Movie Movie { get; set; } //propriedade de navegação
 
     [Required]
-    public string UserId { get; set; }
+    public string UserId { get; set; } 
     [ForeignKey("UserId")]
-    public AppUser User { get; set; }
+    public AppUser User { get; set; }  
 
     [Required]
     [StringLength(1000)]
