@@ -74,4 +74,3 @@ public static class TranslateIdentityErrors
         return message;
     }
 }
-

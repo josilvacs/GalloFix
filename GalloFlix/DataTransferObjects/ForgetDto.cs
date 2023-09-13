@@ -10,5 +10,3 @@ public class ForgetDto
     [Display(Name = "Informe seu Email de Cadastro que enviaremos as instruções para recuperar sua senha")]
     public string Email { get; set; }
 }
-
- 

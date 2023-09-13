@@ -2,7 +2,6 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GalloFlix.Models;
-
 [Table("MovieComment")]
 public class MovieComment
 {
@@ -26,5 +25,4 @@ public class MovieComment
 
     [Required]
     public DateTime CommentDate { get; set; }
-
-}   
+}
